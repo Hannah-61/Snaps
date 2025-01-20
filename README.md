@@ -6,7 +6,7 @@ Welcome to **Snaps**, a photo-sharing application prototype that I developed as 
 
 The goal of this project was to create a responsive and interactive photo-sharing application using React and Sass within a three-week timeframe. The Snaps Creative Director provided design mockups and assets, which I translated into a working prototype that meets the required functionality and design specifications.
 
-I collaborated closely with other teams working on the backend API to ensure smooth integration in the future. For now, the app focuses on static components and dynamic data rendering using JSON.
+I was working on the backend API to ensure smooth integration in the future. For now, the app focuses on static components and dynamic data rendering using JSON.
 
 ## Tools & Technologies Used
 
