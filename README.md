@@ -91,13 +91,11 @@ The application should now be accessible at `http://localhost:5173`.
 
 ## Submission Details
 
-I have successfully merged the development branch with the main branch following best practices. The repository link has been submitted in Synapse as required.
+I have successfully merged the development branch with the main branch following best practices. 
 
 ## Conclusion
 
 Working on Snaps has been an enriching experience, allowing me to sharpen my skills in React, Sass, and responsive design. I'm excited about the potential of this application and look forward to integrating the backend API in future iterations.
 
 ---
-
-If you have any questions or suggestions regarding this project, feel free to reach out!
 
