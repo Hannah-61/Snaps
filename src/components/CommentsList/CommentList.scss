@@ -1,0 +1,76 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment-list {
+    background-color: $color-pistachio;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    width: 100%;
+    margin: 0 auto;
+    @include tablet {
+        max-width: 45.9375rem;
+    }
+
+    &__title {
+        font-family: 'Outfit';
+        @include font-style(1.125rem, 500, 1.4375rem);
+        margin-bottom: 1rem;
+        color: $color-black;
+
+        @include tablet{
+            @include font-style(1.5rem, 500, 1.875rem);
+        }
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    &__author {
+        font-family: 'Outfit';
+        @include font-style(0.75rem, 500, 0.9375rem);
+        margin-bottom: 1rem;
+        color: $color-forest-green-dark;
+
+        @include tablet{
+            @include font-style(1.25rem, 500, 1.625rem);
+        }
+    }
+
+    &__date {
+        font-family: 'Outfit';
+        @include font-style(0.75rem, 500, 0.9375rem);
+        margin-bottom: 1rem;
+        color: $color-forest-green-dark;
+
+        @include tablet{
+            @include font-style(1.25rem, 500, 1.625rem);
+        }
+    }
+
+    &__text {
+        font-family: 'Outfit';
+        @include font-style(0.75rem, 500, 0.9375rem);
+        margin-bottom: 1rem;
+        color: $color-black;
+
+        @include tablet{
+            @include font-style(1.25rem, 500, 1.625rem);
+        }
+    }
+
+    &__divider {
+        border: none;
+        border-top: 2px solid $color-sea-green;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,58 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+    height: 15vh;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-black;
+    background-color: $color-pistachio;
+
+    &__logo {
+        font-family: 'Newsreader';
+        @include font-style(2rem, 500, 1rem);
+        color: $color-black;
+    }
+}
+
+.toggle-filters-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    font-family: 'Outfit';
+    @include font-style(0.75rem, 500, 1rem);
+    background-color: $color-pistachio;
+    border: 1px solid $color-forest-green;
+    border-radius: 2rem;
+    color: $color-forest-green;
+    cursor: pointer;
+    
+
+
+    &--open {
+        background-color: $color-forest-green;
+        color: $color-snaps-white;
+        border-color: $color-snaps-white;
+
+        .toggle-filters-button__icon {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    &__icon {
+        width: 1rem;
+        height: auto;
+        transition: all 0.3s ease-in-out;
+    }
+
+    @include mobile {
+        margin: 0.5rem 1rem;
+    }
+
+    @include desktop {
+        margin: 0.6875rem 1.375rem;
+    }
+}

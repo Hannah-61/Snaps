@@ -1,0 +1,39 @@
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+
+.photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    line-height: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+
+    &.filter-open {
+        justify-content: flex-start;
+    }
+
+    &.filter-closed {
+        justify-content: flex-start;
+    }
+
+    .photo-card {
+        flex: 1 1 calc(100% - 1.5rem);
+
+        @include tablet {
+            flex: 1 1 calc(50% - 1.5rem);
+        }
+
+        @include desktop {
+            &.filter-open {
+                flex: 1 1 calc(50% - 1.5rem);
+            }
+
+            &.filter-closed {
+                flex: 1 1 calc(33.33% - 1.5rem);
+            }
+        }
+    }
+}

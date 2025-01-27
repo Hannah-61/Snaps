@@ -1,0 +1,76 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: $color-pistachio;
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    @include tablet {
+        max-width: 45.9375rem;
+    }
+    &__label {
+        font-family: 'Outfit';
+        @include font-style(1.125rem, 500, 1.4375rem);
+        color: $color-black;
+
+        @include tablet {
+            @include font-style(1.5rem, 500, 1.875rem);
+        }
+    }
+
+    &__input, 
+    &__textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid $color-sea-green;
+        border-radius: 0.375rem;
+        font-family: 'Outfit';
+        @include font-style(0.75rem, 500, 0.9375rem);
+        color: $color-black;
+
+        @include tablet {
+            border-radius: 0.375rem;
+            @include font-style(1.25rem, 500, 1.625rem);
+        }
+
+
+        &:focus {
+            border-color: $color-forest-green-dark;
+        }
+    }
+
+    &__textarea {
+        min-height: 6rem;
+        resize: none;
+    }
+
+    &__input--error,
+    &__textarea--error {
+        border: 2px solid $color-error !important;
+    }
+
+    &__button {
+        align-self: flex-end;
+        padding: 0.75rem 1.5rem;
+        background-color: $color-forest-green;
+        color: $color-snaps-white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-family: 'Outfit';
+        @include font-style(0.75rem, 500, 0.9375rem);
+
+        @include tablet {
+            @include font-style(1.25rem, 500, 1.625rem);
+        }
+
+        &:hover {
+            background-color: $color-forest-green-dark;
+        }
+    }
+}

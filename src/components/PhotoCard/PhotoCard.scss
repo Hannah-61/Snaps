@@ -1,0 +1,84 @@
+@use "../../styles/partials/_mixins.scss" as *;
+@use "../../styles/partials/_global.scss" as *;
+@use "../../styles/partials/_typography.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+
+.photo-card-wrapper {
+    border: 0.0675rem solid $color-sea-green;
+    border-radius: 0.75rem;
+    display: flex;
+    max-width: 28.125rem; 
+}
+
+.photo-card {
+    background-color: $color-sage;
+    border-radius: 0.75rem;
+    width: 100%;
+    max-width: 28.125rem; 
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    &__photo {
+        background-color: $color-sage;
+        position: relative;
+        width: 100%;
+        
+        &__image {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+            object-fit: cover;
+        }
+
+        &__photographer {
+            font-family: 'Outfit';
+            @include font-style(1rem, 700, 1rem);
+            color: $color-black;
+            background-color: $color-sage;
+            padding: 0.75rem 1rem;
+            border-top-left-radius: 0.75rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background-color: $color-sage;
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+        width: 100%;
+        box-sizing: border-box;
+
+        &__item {
+            font-family: 'Outfit';
+            @include font-style(0.75rem, 500, 0.9375rem);
+            background-color: $color-snaps-white;
+            padding: 0.375rem 0.5rem;
+            border-radius: 0.375rem;
+            border: 2px solid $color-sea-green;
+            color: $color-black;
+
+            @include tablet{
+                padding: 0.5rem 0.75rem;
+                @include font-style(0.875rem, 500, 1.09375rem);
+                border-radius: 0.75rem;
+            }
+
+            &:hover {
+                background-color: $color-sea-green;
+                color: $color-black;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+import "./Filter.scss";
+
+export default function Filter({ activeFilter, setActiveFilter }) {
+    const [tags, setTags] = useState([]);
+
+    useEffect(() => {
+        const fetchTags = async () => {
+            try {
+                const response = await axios.get(
+                    `https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=${window.apikey}`
+                );
+                setTags(response.data);
+            } catch (error) {
+                console.error("Error fetching tags:", error);
+            }
+        };
+        fetchTags();
+    }, []);
+
+    const handleTagClick = (tagClicked) => {
+        console.log(`${tagClicked} tag clicked`);
+        if (tagClicked === activeFilter) {
+            setActiveFilter(null);
+        } else {
+            setActiveFilter(tagClicked);
+        }
+    };
+
+    return (
+        <div className="filter-list">
+            <p className="filter-list__title">Filters</p>
+            <div className="filter-list__container">
+                {tags.map((tag, index) => (
+                    <span
+                        key={index}
+                        className={`filter ${activeFilter === tag ? "filter--active" : ""}`}
+                        onClick={() => handleTagClick(tag)}
+                    >
+                        {tag}
+                    </span>
+                ))}
+            </div>
+        </div>
+    );
+}
